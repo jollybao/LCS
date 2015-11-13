@@ -8,6 +8,8 @@ saved into mapping files.
 
 After that, another program reads those files and computes the spatial jacobian at each point, therefore finds
 the Green-Cauchy tensor. The largest eigenvalue of the tensor was computed, and it is essentially the FTLE. 
+The following picture is the FTLE filed of the system at time 0.
+https://cloud.githubusercontent.com/assets/8973982/11157228/5f1f7ac2-8a1e-11e5-93d7-5409f1fc92eb.png
 
 To speed up the animation, the FTLE fields were also well saved into different files, which then were read by 
 third program, that makes a small animation of the evolution of the Double Gyre from 0 to 10s, with 10 frames
