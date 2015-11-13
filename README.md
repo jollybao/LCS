@@ -7,8 +7,12 @@ structure of the field, and then computes the mapping of field using standard RK
 saved into mapping files.
 
 After that, another program reads those files and computes the spatial jacobian at each point, therefore finds
-the Green-Cauchy tensor. The largest eigenvalue of the tensor was computed, and it is essential the FTLE. 
+the Green-Cauchy tensor. The largest eigenvalue of the tensor was computed, and it is essentially the FTLE. 
 
 To speed up the animation, the FTLE fields were also well saved into different files, which then were read by 
 third program, that makes a small animation of the evolution of the Double Gyre from 0 to 10s, with 10 frames
 per second.
+
+In addition to LCS, I've also made animation that shows the vector field of the Double Gyre chainging as time
+evolves. Interestingly, if one drop couple partiles in the field seprated in small distance, they will very
+soon diverges and shows the chaotic pattern of the system.
