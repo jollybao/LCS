@@ -7,6 +7,8 @@ import matplotlib.animation as animation
 
 
 fig, ax = plt.subplots(1,1,figsize=(10,5))
+#plt.rcParams['animation.ffmpeg_path'] = 'C:/ffmpeg/bin/ffmpeg'
+#mywriter = animation.FFMpegWriter()
 
 # constants
 p = num.pi
@@ -89,6 +91,7 @@ ani = animation.FuncAnimation(fig, animate,
          fargs=(Q,X,Y,C,R,N),
     interval=100,blit=False)
 
+#ani.save('VF_demo.mp4',writer = mywriter)
 
 plt.show()
 

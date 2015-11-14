@@ -6,7 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
 fig = plt.figure()
-#invert y axis
+#plt.rcParams['animation.ffmpeg_path'] = 'C:/ffmpeg/bin/ffmpeg'
+#mywriter = animation.FFMpegWriter()
+# invert y axis
 plt.gca().invert_yaxis()
 ims = []
 
@@ -19,6 +21,6 @@ for i in range(100):
 ani = animation.ArtistAnimation(fig, ims, interval=10, blit=True,
                                 repeat_delay=1000)
 
-#ani.save('FTLE.mp4')
+#ani.save('FTLE.mp4',writer = mywriter)
 
 plt.show()
