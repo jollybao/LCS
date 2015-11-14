@@ -20,4 +20,5 @@ per second.
 In addition to LCS, I've also made animation that shows the vector field of the Double Gyre chainging as time
 evolves. Interestingly, if one drop couple partiles in the field seprated in small distance, they will very
 soon diverges and shows the chaotic pattern of the system.
+
 ![alt tag](https://cloud.githubusercontent.com/assets/8973982/11161256/dc7849a0-8a45-11e5-8435-566cacdb1484.gif)
