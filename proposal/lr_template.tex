@@ -1,0 +1,156 @@
+\NeedsTeXFormat{LaTeX2e}
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+
+% The above lines establish the type of LaTeX you're using, the font and the general
+% type of document (article, book, letter).
+
+
+% Various bold symbols - optional stuff
+\providecommand\bnabla{\boldsymbol{\nabla}}
+\providecommand\bcdot{\boldsymbol{\cdot}}
+\newcommand\etb{\boldsymbol{\eta}}
+
+% For multiletter symbols - optional stuff
+\newcommand\Imag{\mbox{Im}} % cf plain TeX's \Im
+\newcommand\Ai{\mbox{Ai}}            % Airy function
+\newcommand\Bi{\mbox{Bi}}            % Airy function
+
+
+% array strut to make delimiters come out right size both ends
+\newsavebox{\astrutbox}
+\sbox{\astrutbox}{\rule[-5pt]{0pt}{20pt}}
+\newcommand{\astrut}{\usebox{\astrutbox}}
+
+% optional shortcuts defined with \newcommand command
+\newcommand\p{\ensuremath{\partial}}
+\newcommand\tti{\ensuremath{\rightarrow\infty}}
+\newcommand\kgd{\ensuremath{k\gamma d}}
+\newcommand\shalf{\ensuremath{{\scriptstyle\frac{1}{2}}}}
+\newcommand\sh{\ensuremath{^{\shalf}}}
+\newcommand\smh{\ensuremath{^{-\shalf}}}
+\newcommand\squart{\ensuremath{{\textstyle\frac{1}{4}}}}
+\newcommand\thalf{\ensuremath{{\textstyle\frac{1}{2}}}}
+\newcommand\ttz{\ensuremath{\rightarrow 0}}
+\newcommand\ndq{\ensuremath{\frac{\mbox{$\partial$}}{\mbox{$\partial$} n_q}}}
+\newcommand\sumjm{\ensuremath{\sum_{j=1}^{M}}}
+\newcommand\pvi{\ensuremath{\int_0^{\infty}%
+  \mskip \ifCUPmtlplainloaded -30mu\else -33mu\fi -\quad}}
+
+\newcommand\etal{\mbox{\textit{et al.}}}
+\newcommand\etc{etc.\ }
+\newcommand\eg{e.g.\ }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% FOR PDFLATEX:  YOU MAY NEED TO (UN)COMMENT THE FIRST LINE DEPENDING ON YOUR (PDF)LATEX DISTRO
+%\newif\ifpdf\ifx\pdfoutput\undefined\pdffalse\else\pdfoutput=1\pdftrue\fi
+\newcommand{\pdfgraphics}{\ifpdf\DeclareGraphicsExtensions{.pdf,.jpg}\else\fi}
+
+\usepackage{graphicx} % Include figure files
+%\usepackage{epsfig}  % old
+\usepackage{bm}% bold math
+
+\usepackage{amsfonts}
+\newcommand{\field}[1]{\mathbb{#1}}
+\newcommand{\C}{\field{C}}
+\newcommand{\R}{\field{R}}
+
+\def\eg{{e.g.\ }}
+\def\etc{{etc.\ }}
+\def\etal{\mbox{\it et al.\ }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \linespread{2}  UNCOMMENT this for Double Spacing; I think it looks awful.  Most values work, i.e.. 1.67
+
+% it all starts here
+
+\begin{document}
+
+\pdfgraphics
+
+\section*{Ph291 Lab Report LaTeX Template}  % No Section number because I used \section* not \section
+                                                                           % same thing works for \equation*
+
+\medskip
+\noindent % I tend to begin a document with no indentation ... you decide.
+This document is also on Moodle.  It is assumed here that the Cover Page is being attached
+separately.
+
+\section{Purpose}  
+In this lab we attempted to discover a snark in a Lorenz oscillator.
+
+\section{Data}
+The data can take many forms.  Tables are common.  Here is an example LaTeX table in two slightly different forms.
+
+\bigskip
+\begin{tabular}{ l c r }
+  \hline
+  N & length (m) & mass (g) \\ \hline
+  1 & 5 & 11.2  \\ \hline
+  2 & 6 & 22.3 \\ \hline
+\end{tabular}
+\medskip
+or
+\medskip
+\begin{tabular}{ | l | c | r | }
+  \hline
+  Or & Use & Boxes \\ \hline
+  1 & 2 & 3   \\ \hline
+  4 & 5 & 6 \\ \hline
+\end{tabular}
+\medskip
+much more on tables at \verb=http://en.wikibooks.org/wiki/LaTeX/Tables=.
+
+\section{Calculations}
+You can write equations in the line, like this ${\bf F}=m{\bf a}$ or as a numbered equation:
+\begin{equation}
+{\bf F} = m{\bf a} .
+\end{equation}
+ 
+Will you ever need a matrix equation?  Probably not, but here's one anyway:
+\begin{eqnarray*}
+\begin{pmatrix} \dot{y_1}\\
+                         \dot{y_2}
+       \end{pmatrix}
+=
+\begin{pmatrix} {y_2}\\
+                         -{y_1}
+       \end{pmatrix}
+\end{eqnarray*}
+
+
+Sometimes, not just for code snippets, you want to make something look like its a excerpt from 
+a document, like this:
+\begin{verbatim}
+function ydot = sho(t,y)
+ydot = [y(2); -y(1)]
+\end{verbatim}
+
+
+\section{Results}
+
+
+\medskip
+\includegraphics[width=2.75in]{lorenz1.png}\includegraphics[width=2.5in]{lorenz2.png}
+% Here is a comment.  One way to deal with simple figure captions is to make them
+% part of your figure, like in the example here.  This method is not good for all purposes
+% and if you re-use a figure often, you will regret it.  But, for Lab Reports, its not bad.
+
+You can put basic figures (PNG or many other formats) in like this.  More ``publication'' like
+form uses the {\em figure} environment, which includes a caption and automatic placement
+in the document.  Probably a bad idea for lab reports.
+
+\section{Conclusion}
+With high statistical certainty, we found that the snark was, in fact, a boojum.  {\em NB: please
+do not take seriously any content in this template!  Refer instead to the Lab Report How To 
+document on Moodle}.  Online you can find very useful 2 page documents summarizing
+LaTeX math symbols and many tutorials on different options, like figures, tables, etc.
+Keep it simple and don't be afraid to experiment!
+
+\end{document}

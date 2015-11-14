@@ -82,7 +82,7 @@
 
 \section{Project goal} 
 \paragraph{
-\indent This project uses Finite-Time Lyapunov Exponent (FTLE) as an approach to study the behaviors of a dynamic system, which could be a circuit system, a chemical reaction or even a single set of equations. However, in our project, we are going to analyze a double vortex fluid system. Due to the expensive calculation cost of Lyapunov exponent, we would only pick some interesting points and study them. The way we are gonna find FTLE is called time delay reconstruct.\\
+\indent This project uses Finite-Time Lyapunov Exponent (FTLE) as an approach to study the behaviors of a dynamic system, which could be a circuit system, a chemical reaction or even a single set of equations. However, in our project, we are going to analyze Double Gyre. We use the Shadden's method to compute FTLE and as well make a short animation.\\
 	}
 	
 
@@ -90,7 +90,7 @@
 
 \section{Team Members and roles}
 \paragraph{Jialun Bao:
- analyze system equations, and write code for solving FTLE.\\
+ analyze system equations, and write code for solving FTLE and making animation.\\
 Jerry Qiu:  animation for vector field and tracer particle.\\
 }	
 
@@ -98,32 +98,35 @@ Jerry Qiu:  animation for vector field and tracer particle.\\
 
 \section{Ph 235 related topics}
 \paragraph{	
-RK4 for solving equations and updating state.\\
-Partially derivative for partial differential equation.\\
-Drawing density plot, and making animation.\\ 
+RK4 method for solving partial differential equations and updating state.\\
+Discrete method to compute partially derivative for PDE.\\
+Density plot and animation on python.\\
+Making a small video using movie maker. \\ 
 Using quiver to draw vector field.\\
 }
+
 
 \section{Final demo}
 \paragraph{
 \indent First, we will show a vector field of a dynamic system with help arrows for visualization, in which two particle separated by small distance are dropped. Then they will diverge as time goes, showing the chaotic behavior of the system. Ideally, it could as many particles as possible, and we would be able to choose initial position for them as well. \\
-\indent Then we will move on to another aspect: the lyapunov exponent of the system at specific point. It shows the local attracting or local repelling. The way we are going to find it is by time delay reconstructing; which basically means, we will pick a point and give it some time delay, and then plot x(t) vs x(t+) , x(t) vs x(t+2) etc. until we have enough information to compute the number. If possible we would also numerically compute the dimension of the system.  \\
-\indent Also, the project code, data and  specific document will be uploaded to my github page for further study. \\
+\indent Then we will move on to another aspect: the finite time lyapunov exponent field of the system. The LCS is then identified through local extrema, which shows the local attracting or local repelling. \\
+\indent In the end, we will show the  a short video of time-variant FTLE field, which will probably be around 10s due to 
+the intensive computation. \\
 }
 
 
 \section{Evaluation}
 \paragraph{
-\indent The evaluation will mainly based on the speed of the simulation, and the accuracy. Also the speed and accuracy of the simulation are closely related to the resolution, which we might also take some consideration-- if we could get some clear graphes. Since we are study some specific points using time delay reconstruct method, whether the result is accurate and consistent will also be a benchmark. In the very end, all the number and animation have to somehow show that the system is chaotic, since we choose a chaotic system at the first place.  \\
+\indent The evaluation will mainly based on the speed of the simulation, and the accuracy. Also the speed and accuracy of the simulation are closely related to the resolution, which we might also take some consideration-- if we could get some clear graphes. In the very end, all the number and animation have to somehow show that the system is chaotic, since we choose a chaotic system at the first place.  \\
 }
 
 
 \section{Time schedule}
 \paragraph{
 	11/6		In class presentation \\
-	11/6		Finish animation	(done) \\
+	11/6		Finish vector field animation	(done) \\
 	11/23		One page update  \\
-	11/30		Finish FTLE calculation  \\
+	11/30		Finish FTLE calculation and animation \\
 	12/4		In class update  \\
 	12/11		Final presentation  \\
 	12/18		Final Project deliverables  \\
