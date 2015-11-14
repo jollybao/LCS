@@ -15,7 +15,7 @@ To speed up the animation, the FTLE fields were also well saved into different f
 the third program, that makes a small animation of the evolution of the Double Gyre from 0 to 10s, with 10 frames
 per second. 
 
-![alt tag](https://cloud.githubusercontent.com/assets/8973982/11161241/7acb7fb0-8a45-11e5-8450-45965b584767.gif)
+![alt tag](https://cloud.githubusercontent.com/assets/8973982/11161444/a3420cfc-8a4a-11e5-9775-8276cd3720c5.gif)
 
 In addition to LCS, I've also made animation that shows the vector field of the Double Gyre chainging as time
 evolves. Interestingly, if one drop couple partiles in the field seprated in small distance, they will very
