@@ -1,4 +1,5 @@
 # Jialun Bao
+# Jerry Qiu
 # 11/13/15
 
 import pylab as plt
